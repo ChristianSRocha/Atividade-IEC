@@ -25,7 +25,7 @@ jobs:
       run: npm install
 
     - name: Run tests # Executa os testes unitários
-      run: npm test
+      run: npx jest
 
   dockerize:
     runs-on: ubuntu-latest
