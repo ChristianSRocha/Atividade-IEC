@@ -24,8 +24,11 @@ jobs:
     - name: Install dependencies # Instala as dependências do projeto
       run: npm install
 
+    - name: Fix Jest permissions
+      run: chmod +x ./node_modules/.bin/jest
+
     - name: Run tests # Executa os testes unitários
-      run: npx jest
+      run: ./node_modules/.bin/jest
 
   dockerize:
     runs-on: ubuntu-latest
